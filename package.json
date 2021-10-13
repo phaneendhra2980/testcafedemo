@@ -1,0 +1,16 @@
+{
+  "name": "testcafedemo",
+  "version": "1.0.0",
+  "description": "automating tests using testcafe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Phaneendhra Aswani Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "testcafe": "^1.16.1",
+    "testcafe-reporter-spec": "^2.1.1",
+    "testcafe-reporter-xunit": "^2.1.0"
+  }
+}
