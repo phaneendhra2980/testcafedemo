@@ -1,12 +1,17 @@
 [
     {
-        "name": "John Heart",
+        "name": "Vishruth",
         "comment": "I love TestCafe!",
-        "resultText": "Thank you, John Heart!"
+        "resultText": "Thank you, Vishruth!"
     },
     {
-        "name": "Olivia Peyton",
+        "name": "Sriansh",
         "comment": "TestCafe is awesome!",
-        "resultText": "Thank you, Olivia Peyton!"
+        "resultText": "Thank you, Sriansh!"
+    },
+    {
+        "name": "Lalitaditya",
+        "comment": "TestCafe is awesome!",
+        "resultText": "Thank you, Lalitaditya!"
     }
 ]
