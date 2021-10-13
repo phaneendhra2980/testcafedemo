@@ -4,11 +4,12 @@
   "description": "automating tests using testcafe",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe edge tests/"
+    "test": "testcafe chrome tests --video artifacts/videos/"
   },
   "author": "Phaneendhra Aswani Kumar",
   "license": "ISC",
   "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "testcafe": "^1.16.1",
     "testcafe-reporter-spec": "^2.1.1",
     "testcafe-reporter-xunit": "^2.1.0"
