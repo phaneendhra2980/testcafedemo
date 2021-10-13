@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/phaneendhra2980/testcafedemo",
   "scripts": {
-    "test": "testcafe 'saucelabs:Chrome@beta:Windows 10' tests --video artifacts/videos/"
+    "test": "testcafe \"saucelabs:Chrome@beta:Windows 10\" tests --video artifacts/videos/"
   },
   "author": "Phaneendhra Aswani Kumar",
   "license": "ISC",
