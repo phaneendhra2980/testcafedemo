@@ -5,18 +5,16 @@ on: [push]
 
 jobs:
   build:
-    name: Run Tests Across Node.js Versions and Operating Systems
-    runs-on: ${{ matrix.os }}
+    name: Run TestCafe Tests
+    runs-on: windows-latest
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [windows-latest]
         node: [8, 10, 12]
     steps:
-      - uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node }}
-      - uses: actions/checkout@v1
-      - name: Run TestCafe Tests
+      - name: Check out the repository
+        uses: actions/checkout@v1
+      - name: Run tests
         uses: DevExpress/testcafe-action@latest
         with:
-          args: "chrome tests"
+            args: "chrome tests"
