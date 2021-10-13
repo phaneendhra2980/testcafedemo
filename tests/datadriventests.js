@@ -1,6 +1,6 @@
 import { Selector } from 'testcafe';
 
-const dataSet = require('../data.json');
+const dataSet = require('./data.json');
 
 fixture`Data-Driven Tests`
     .page`http://devexpress.github.io/testcafe/example`;

@@ -6,11 +6,7 @@ on: [push]
 jobs:
   build:
     name: Run TestCafe Tests
-    runs-on: windows-latest
-    strategy:
-      matrix:
-        os: [windows-latest]
-        node: [8, 10, 12]
+    runs-on: windows-latest   
     steps:
       - name: Check out the repository
         uses: actions/checkout@v1
