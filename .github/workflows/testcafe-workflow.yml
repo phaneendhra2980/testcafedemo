@@ -7,7 +7,9 @@ jobs:
   build:
     name: Run TestCafe Tests
     runs-on: windows-latest
-    env: "SAUCE_USERNAME:\"sso-pwc-phaneendhra.aswani.kumar\" SAUCE_ACCESS_KEY:\"087b1d99-e4c9-4f8d-8810-561d845c9c3a\""       
+    env:
+        SAUCE_USERNAME: "${{ secrets.SAUCE_USERNAME }}"
+        SAUCE_ACCESS_KEY: "${{ secrets.SAUCE_ACCESS_KEY }}"
     steps:
       - name: Check out the repository
         uses: actions/checkout@v1
