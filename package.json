@@ -4,7 +4,7 @@
   "description": "automating tests using testcafe",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome tests/"
+    "test": "testcafe edge tests/"
   },
   "author": "Phaneendhra Aswani Kumar",
   "license": "ISC",
