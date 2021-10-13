@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "automating tests using testcafe",
   "main": "index.js",
+  "repository": "https://github.com/phaneendhra2980/testcafedemo",
   "scripts": {
-    "test": "testcafe chrome tests --video artifacts/videos/"
+    "test": "testcafe 'saucelabs:Chrome@beta:Windows 10' tests --video artifacts/videos/"
   },
   "author": "Phaneendhra Aswani Kumar",
   "license": "ISC",
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "testcafe": "^1.16.1",
+    "testcafe-browser-provider-saucelabs": "^1.9.0",
     "testcafe-reporter-spec": "^2.1.1",
     "testcafe-reporter-xunit": "^2.1.0"
   }

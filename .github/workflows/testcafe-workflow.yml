@@ -6,11 +6,14 @@ on: [push]
 jobs:
   build:
     name: Run TestCafe Tests
-    runs-on: windows-latest   
+    runs-on: windows-latest
+    env:
+      SAUCE_USERNAME:"sso-pwc-phaneendhra.aswani.kumar"
+      SAUCE_ACCESS_KEY:"087b1d99-e4c9-4f8d-8810-561d845c9c3a"        
     steps:
       - name: Check out the repository
         uses: actions/checkout@v1
       - name: Run tests
         uses: DevExpress/testcafe-action@latest
         with:
-            args: "chrome tests --video artifacts/videos/"
+            args: "'saucelabs:Chrome@beta:Windows 10' tests --video artifacts/videos/"
