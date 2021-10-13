@@ -1,30 +1,16 @@
 import { Selector } from 'testcafe';
 
-import page from './page-model';
+import examplepage from '../pageobjects/examplepage';
+import thankyoupage from '../pageobjects/thankyoupage';
 
-fixture `Page Model`
-    .page `https://devexpress.github.io/testcafe/example/`;
 
-test('Text typing basics', async t => {
-    await t
-        .typeText(page.nameInput, 'Peter')
-        .typeText(page.nameInput, 'Paker', { replace: true })
-        .typeText(page.nameInput, 'r', { caretPos: 2 })
-        .expect(page.nameInput.value).eql('Parker');
-});
+fixture`Structured Page Model`
+    .page`https://devexpress.github.io/testcafe/example/`;
 
-test('Click check boxes and then verify their state', async t => {
-    for (const feature of page.featureList) {
-        await t
-            .click(feature.label)
-            .expect(feature.checkbox.checked).ok();
-    }
-});
 
-test('Submit a developer name and check the header', async t => {
-    const header = Selector('#article-header');
+test('Submit a name and check the header', async t => {
+    
+    await examplepage.clicksubmitName('Phaneendhra Aswani Kumar');
 
-    await page.submitName('Peter');
-
-    await t.expect(header.innerText).eql('Thank you, Peter!');
+    await thankyoupage.verifyheader('Phaneendhra Aswani Kumar');
 });
