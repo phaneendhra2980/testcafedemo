@@ -1,0 +1,30 @@
+{
+    "browsers": "chrome",
+    "src": "tests",
+    "userVariables": {
+        "url": "http://devexpress.github.io/testcafe/example"
+    },
+    "concurrency": 1,
+    "selectorTimeout": 3000,
+    "assertionTimeout": 1000,
+    "pageLoadTimeout": 1000,    
+    "disablePageCaching": true,
+    "color": true,
+    "reporter": {
+        "name": "html",
+        "output": "./Reports/Reports.html"
+    },
+    "screenshots": {
+        "path": "Reports/screenshots/",
+        "takeOnFails": true,
+        "pathPattern": "${DATE}_${TIME}/test-${TEST_INDEX}/${USERAGENT}/${FILE_INDEX}.png",
+        "fullPage": true,
+        "thumbnails": false
+    },
+    "videoPath": "Reports/artifacts/videos/",
+    "videoOptions": {
+        "singleFile": true,
+        "failedOnly": true,
+        "pathPattern": "${TEST_INDEX}/${USERAGENT}/${FILE_INDEX}.mp4"
+    }
+}

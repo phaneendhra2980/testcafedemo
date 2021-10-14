@@ -5,17 +5,44 @@
   "main": "index.js",
   "repository": "https://github.com/phaneendhra2980/testcafedemo",
   "scripts": {
-    "test": "testcafe chrome tests --reporter html:./Reports/Reports.html --video artifacts/videos/"
+    "debug": "node --inspect=1337 --debug-brk --nolazy node_modules/cucumber/bin/cucumber-js --tags @debug --format json:./reports/report.json",
+    "test": "./node_modules/.bin/cucumber-js.cmd",
+    "test-config": "testcafe --reporter html:./Reports/Reports.html --config-file configurations/localtest.testcaferc.json",
+    "test-report": "./node_modules/.bin/cucumber-js.cmd --format json:./reports/report.json",
+    "test-chrome": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"chrome\\\"}\"",
+    "test-ie": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"ie\\\"}\"",
+    "test-edge": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"edge\\\"}\"",
+    "test-firefox": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"firefox\\\"}\"",
+    "test-opera": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"opera\\\"}\"",
+    "test-safari": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"safari\\\"}\"",
+    "test-chrome-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"chrome\\\"}\"",
+    "test-ie-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"ie\\\"}\"",
+    "test-edge-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"edge\\\"}\"",
+    "test-firefox-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"firefox\\\"}\"",
+    "test-opera-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"opera\\\"}\"",
+    "test-safari-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"safari\\\"}\"",
+    "test-chrome-headless": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"chrome:headless\\\"}\"",
+    "test-firefox-headless": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"firefox:headless\\\"}\""
   },
-  "author": "Phaneendhra Aswani Kumar",
-  "license": "ISC",
+  "author": "Phaneendhra Aswani Kumar <Phaneendhra@gmail.com>",
+  "contributors": [
+    "Phaneendhra Aswani Kumar"
+  ],
+  "license": "Phaneendhra Aswani Kumar",
   "dependencies": {
+    "@cucumber/cucumber": "^7.3.1",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "cucumber": "^7.0.0-rc.0",
+    "cucumber-html-reporter": "^5.5.0",
     "testcafe": "^1.16.1",
     "testcafe-browser-provider-saucelabs": "^1.9.0",
     "testcafe-reporter-html": "^1.4.6",
     "testcafe-reporter-list": "^2.1.0",
+    "testcafe-reporter-reportportal": "^1.0.13",
     "testcafe-reporter-spec": "^2.1.1",
     "testcafe-reporter-xunit": "^2.1.0"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.3.1"
   }
 }
