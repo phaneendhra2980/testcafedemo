@@ -6,14 +6,11 @@ on: [push]
 jobs:
   build:
     name: Run TestCafe Tests
-    runs-on: windows-latest
-    env:
-        SAUCE_USERNAME: "${{ secrets.SAUCE_USERNAME }}"
-        SAUCE_ACCESS_KEY: "${{ secrets.SAUCE_ACCESS_KEY }}"
+    runs-on: windows-latest  
     steps:
       - name: Check out the repository
         uses: actions/checkout@v1
       - name: Run tests
         uses: DevExpress/testcafe-action@latest
         with:
-            args: "'saucelabs:Chrome@beta:Windows 10' tests --video artifacts/videos/"
+            args: "chrome tests --reporter html:./Reports/Reports.html --video artifacts/videos/"

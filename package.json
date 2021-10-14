@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/phaneendhra2980/testcafedemo",
   "scripts": {
-    "test": "testcafe \"saucelabs:Chrome@beta:Windows 10\" tests --video artifacts/videos/"
+    "test": "testcafe chrome tests --reporter html:./Reports/Reports.html --video artifacts/videos/"
   },
   "author": "Phaneendhra Aswani Kumar",
   "license": "ISC",
@@ -13,6 +13,8 @@
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "testcafe": "^1.16.1",
     "testcafe-browser-provider-saucelabs": "^1.9.0",
+    "testcafe-reporter-html": "^1.4.6",
+    "testcafe-reporter-list": "^2.1.0",
     "testcafe-reporter-spec": "^2.1.1",
     "testcafe-reporter-xunit": "^2.1.0"
   }
